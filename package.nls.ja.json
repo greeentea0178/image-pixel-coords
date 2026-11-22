@@ -1,0 +1,5 @@
+{
+  "description": "画像を表示しているとき、カーソル位置のピクセル座標を表示します。",
+  "viewer.displayName": "Image Pixel Coords",
+  "command.open": "ピクセル座標ビューアで開く"
+}

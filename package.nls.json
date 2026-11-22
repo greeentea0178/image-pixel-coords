@@ -1,0 +1,5 @@
+{
+  "description": "Show the pixel coordinates under the cursor while viewing images.",
+  "viewer.displayName": "Image Pixel Coords",
+  "command.open": "Open with Pixel Coordinates Viewer"
+}

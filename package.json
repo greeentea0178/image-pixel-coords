@@ -1,0 +1,90 @@
+{
+  "name": "image-pixel-coords",
+  "displayName": "Image Pixel Coords",
+  "description": "%description%",
+  "version": "0.1.0",
+  "publisher": "ryoikarashi",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "image",
+    "pixel",
+    "coordinates",
+    "cursor",
+    "position",
+    "image viewer",
+    "image preview",
+    "png",
+    "jpg",
+    "gif",
+    "webp",
+    "座標",
+    "画像",
+    "ピクセル"
+  ],
+  "l10n": "./l10n",
+  "main": "./out/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "imagePixelCoords.viewer",
+        "displayName": "%viewer.displayName%",
+        "selector": [
+          {
+            "filenamePattern": "*.png"
+          },
+          {
+            "filenamePattern": "*.jpg"
+          },
+          {
+            "filenamePattern": "*.jpeg"
+          },
+          {
+            "filenamePattern": "*.gif"
+          },
+          {
+            "filenamePattern": "*.bmp"
+          },
+          {
+            "filenamePattern": "*.webp"
+          }
+        ],
+        "priority": "option"
+      }
+    ],
+    "commands": [
+      {
+        "command": "imagePixelCoords.open",
+        "title": "%command.open%",
+        "category": "Image Pixel Coords"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "imagePixelCoords.open",
+          "when": "resourceExtname =~ /\\.(png|jpe?g|gif|bmp|webp)$/i",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./ && tsc -p ./tsconfig.webview.json",
+    "package": "npm run compile && npx --yes @vscode/vsce package --allow-missing-repository --out image-pixel-coords.vsix",
+    "install-ext": "npm run package && code --install-extension image-pixel-coords.vsix --force"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "@types/vscode-webview": "^1.57.5",
+    "typescript": "^5.4.0"
+  }
+}

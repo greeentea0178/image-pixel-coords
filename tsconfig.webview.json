@@ -1,0 +1,14 @@
+{
+  // Webview side (runs in the browser-like webview). Output: out/webview/viewer.js, loaded as an ES module.
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vscode-webview"],
+    "outDir": "out",
+    "rootDir": "src",
+    "sourceMap": true,
+    "strict": true
+  },
+  "include": ["src/webview"]
+}
