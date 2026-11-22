@@ -6,5 +6,6 @@
 - Image viewer (PNG / JPEG / GIF / BMP / WebP) that shows the pixel coordinates under the cursor in the status bar.
 - Image size and zoom level always visible in the status bar.
 - Click / Alt+click / Ctrl+wheel to zoom, Shift+click to copy coordinates, `0` to fit, `1` for 100%.
-- Reloads automatically when the image file changes on disk.
+- Reloads automatically when the image file changes on disk, and warns when it is deleted.
+- Open one or more images from the Explorer context menu or the Command Palette.
 - English and Japanese UI.

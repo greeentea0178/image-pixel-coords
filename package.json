@@ -5,6 +5,14 @@
   "version": "0.1.0",
   "publisher": "ryoikarashi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greeentea0178/image-pixel-coords.git"
+  },
+  "bugs": {
+    "url": "https://github.com/greeentea0178/image-pixel-coords/issues"
+  },
+  "homepage": "https://github.com/greeentea0178/image-pixel-coords#readme",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.85.0"
@@ -78,7 +86,7 @@
   },
   "scripts": {
     "compile": "tsc -p ./ && tsc -p ./tsconfig.webview.json",
-    "package": "npm run compile && npx --yes @vscode/vsce package --allow-missing-repository --out image-pixel-coords.vsix",
+    "package": "npm run compile && npx --yes @vscode/vsce package --out image-pixel-coords.vsix",
     "install-ext": "npm run package && code --install-extension image-pixel-coords.vsix --force"
   },
   "devDependencies": {
