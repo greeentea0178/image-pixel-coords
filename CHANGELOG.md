@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Fix: when zooming in, the image stopped growing horizontally and only got taller.
+
 ## 0.1.0
 
 - Initial release.
